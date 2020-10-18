@@ -1,0 +1,413 @@
+<!--=========home banner start============-->
+<div id="minimal-bootstrap-carousel" class="home1 hmslider1 carousel slide carousel-fade shop-slider full_width" data-ride="carousel">
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+        <div class="item active slide-1">
+            <div class="carousel-caption">
+                <div class="thm-container ">
+                    <div class="box valign-top">
+                        <div class="content home1-slides">
+                            <h1 data-animation="animated fadeInUp">
+                                Grow your business with our affordable <span>business solutions</span>
+                            </h1>
+                            <p data-animation="animated fadeInDown" class="fnt-18"> We serve small, mid-sized and large enterprise companies across West Africa and our methodology is strictly customer-centric - as we work with you to articulate your business goals and never lose sight of your vision.</p>
+                            <a data-animation="animated fadeInUp" href="#" class="header-requestbtn learn-more">learn
+                                more
+                            </a>
+                            <a data-animation="animated fadeInUp" href="#" class="header-requestbtn learn-more our-solution hvr-bounce-to-right">Our
+                                Solution
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="item slide-2">
+            <div class="carousel-caption">
+                <div class="thm-container">
+                    <div class="box valign-top">
+                        <div class="content home1-slides">
+                            <h1 data-animation="animated fadeInUp">
+                                Innovative In <span>Oil & Gas</span>
+                            </h1>
+                            <p data-animation="animated fadeInDown">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor in cididunt consectetet, consectetut labore et dolore.</p>
+                            <a data-animation="animated fadeInUp" href="#" class="header-requestbtn learn-more">learn
+                more
+              </a>
+                            <a data-animation="animated fadeInUp" href="#" class="header-requestbtn learn-more our-solution hvr-bounce-to-right">Our
+                Solution
+              </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="item slide-3">
+            <div class="carousel-caption">
+                <div class="thm-container">
+                    <div class="box valign-top">
+                        <div class="content home1-slides">
+                            <h1 data-animation="animated fadeInUp">
+                                <span>Oryx HR</span> & payroll Solution
+                            </h1>
+                            <p data-animation="animated fadeInDown">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor in cididunt consectetet, consectetut labore et dolore.</p>
+                            <a data-animation="animated fadeInUp" routerLink="/about" class="header-requestbtn learn-more">learn
+                more
+              </a>
+                            <a data-animation="animated fadeInUp" href="#" class="header-requestbtn learn-more our-solution hvr-bounce-to-right">Our
+                Solution
+              </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- Controls -->
+    <!-- <a class="left carousel-control" href="#minimal-bootstrap-carousel" role="button" data-slide="prev">
+        <i class="material-icons">keyboard_arrow_left</i>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#minimal-bootstrap-carousel" role="button" data-slide="next">
+        <i class="material-icons">keyboard_arrow_right</i>
+        <span class="sr-only">Next</span>
+    </a> -->
+
+    <!--=========home banner end============-->
+    <section class="pad100-top-bottom" *ngIf="home">
+        <div class="container">
+            <!--<div class="banner-bottom-boxes">
+          <ul>
+                 <li class="first-box">
+                     <span class="icons"><img src="./assets/images/delivery-icon1.png"></span>
+                     <h4>Punctual Delivery Time</h4>
+                     <p>99% Delivered On Time</p>
+                 </li>
+                 <li class="second-box">
+                     <span class="icons"><img src="./assets/images/technology-icon1.png"></span>
+                     <h4>High Technology Factory</h4>
+                     <p>& Environment Friednly</p>
+                 </li>
+                 <li class="third-box">
+                     <span class="icons"><img src="./assets/images/standard-labor-icon.png"></span>
+                     <h4>High Standard Labors</h4>
+                     <p>99% QC Passed</p>
+                 </li>
+             </ul>
+          </div>-->
+            <!--=========Box Column Start============-->
+            <div class="boxes-column">
+                <ul *ngFor="let box of home.boxes">
+                    <li>
+                        <span class="boxes-icons">
+                            <img src="{{box.imgLink}}" alt="team-icon"> </span>
+                        <div class="boxes-desc">
+                            <h4>{{box.title}}</h4>
+                            <p>{{box.desc}}</p>
+                        </div>
+                    </li>
+                    <!-- <li>
+                    <span class="boxes-icons">
+                        <img src="./assets/images/delivery-time-icon.png" alt="delivery-icon"> </span>
+                    <div class="boxes-desc">
+                        <h4>on Time Delivery</h4>
+                        <p>Oryx employs up-to-date methodologies designed to facilitate the delivery of projects efficiently and timeously.</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="boxes-icons">
+                        <img src="./assets/images/quality-icon.png" alt="quality-icon"> </span>
+                    <div class="boxes-desc">
+                        <h4>Quality Assurance</h4>
+                        <p>The achieved result for all projects implementation is high customer satisfaction levels.</p>
+                    </div>
+                </li> -->
+                </ul>
+            </div>
+            <!--=========Box Column end============-->
+            <!--=========who Column Start============-->
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 img">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/DlbC3I0LcMY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 martop30">
+                    <h3>{{home.infoTitle}}</h3>
+                    <p class="fnt-17">{{home.infoDesc}}
+                    </p>
+                    <a data-animation="animated fadeInUp" class="header-requestbtn more-infobtn hvr-bounce-to-right" href="#">{{home.infoBtn}}</a>
+                </div>
+            </div>
+            <!--=========who Column end============-->
+        </div>
+    </section>
+    <section class="home2 bestthing-section">
+        <div class="container">
+            <div class="row ">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 bestthing-text-column">
+                    <h2>THE NEXT BEST THING IN
+                        <span>BUSINESS / IT</span>
+                    </h2>
+                    <p class="fnt-17">Our expertise cuts across several industries - Engineering Construction and operations, Oil and Gas, Logistics, Food and Beverages, Advertisement, Wholesale distribution, Manufacturing, Pharmaceuticals and more. We are proud to be
+                        partners in progress with several world class companies- SAP, Sage and Microsoft.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--============ our partner start  ===============-->
+    <section class="pad65-50-top-bottom">
+        <div class="container">
+            <h3 class="text-center">Our Partners</h3>
+            <div class="row">
+                <div class="client_hover">
+                    <div class="col-md-3 col-sm-4 col-xs-6">
+                        <span class="client_img image_hover"> <img src="./assets/images/sap-partner.jpg"
+                                class="img-responsive zoom_img_effect" alt="sap partner image"> </span>
+                    </div>
+                    <div class="col-md-3 col-sm-3 col-xs-6">
+                        <span class="client_img image_hover"> <img src="./assets/images/Sage.jpg"
+                                class="img-responsive zoom_img_effect" alt="sage partnet image"> </span>
+                    </div>
+                    <div class="col-md-3 col-sm-3 col-xs-6">
+                        <span class="client_img image_hover"> <img src="./assets/images/microsoft.jpg"
+                                class="img-responsive zoom_img_effect" alt="microsoft partner image"> </span>
+                    </div>
+                    <div class="col-md-3 col-sm-3 col-xs-6">
+                        <span class="client_img image_hover"> <img src="./assets/images/checkP-logo.jpg"
+                                class="img-responsive zoom_img_effect" alt="check poing partner image"> </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="hight-level-section background-variation">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h2> <span>Innovative Business Solutions</span></h2>
+                </div>
+                <div class="col-lg-4 col-md-4 col-xs-12 col-xs-12 text-center">
+                    <p class="vision-icon icon_size"><i class="fa fa-eye"></i>Vision</p>
+                    <p class="fnt-17">Our vision is to be Africa’s premier Business solutions firm. </p>
+
+                </div>
+                <div class="col-lg-4 col-md-4 col-xs-12 col-xs-12 text-center">
+
+
+                    <p class="value-icon icon_size"><i class="fa fa-line-chart"></i>Values</p>
+                    <p class="fnt-17">Our journey is taking us on a transformation towards becoming Africa’s leading Business Consultancy firm.</p>
+                </div>
+                <div class="col-lg-4 col-md-4 col-xs-12 col-xs-12 text-center">
+                    <p class="mission-icon icon_size"><i class="fa fa-rocket"></i> Mission</p>
+                    <p class="fnt-17"> Our mission is to be the first choice business solutions provide in Africa.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--=======Service and product Start======-->
+    <section class="pad65-50-top-bottom">
+        <div class="container">
+            <h3 class="text-center">PRODUCTS AND SERVICES</h3>
+            <!-- <ul class="footer-info"></ul> -->
+            <div class="row">
+                <div class="col-md-1 col-sm-1 col-xs-12 news-column service-column">
+
+                </div>
+                <div class="col-md-2 col-sm-2 col-xs-12 news-column service-column">
+                    <div class="spotlight-item__top-content">
+                        <div class="spotlight-item__intro-image burst">
+                            <a href="https://oryxhr.com" class="spotlight-item__image-link">
+                                <img data-src="./assets/images/oryx-bg.jpg" alt="" class=" lazyloaded" src="./assets/images/oryx-bg.jpg"><noscript><img src="./assets/images/oryx-bg.jpg"
+                                        alt="Oryx" /></noscript>
+                            </a>
+                        </div>
+
+                        <a href="https://oryxhr.com" class="spotlight-item__logo-link">
+                            <div class="spotlight-item__logo">
+
+                                <img src="./assets/images/oryx-logo.png" alt="Oryx Logo">
+                            </div>
+                        </a>
+
+                        <h6 class="text-center">Oryx Solutions</h6>
+
+                        <div class="spotlight-item__content">Oryx Solutions are very flexible and evolving software.
+                        </div>
+                    </div>
+
+                    <div class="spotlight-item__cta">
+                        <a href="https://oryxhr.com" title="Explore Oryx HR">Explore
+                            Oryx Solutions</a>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-2 col-xs-12 news-column service-column">
+                    <div class="spotlight-item__top-content">
+                        <div class="spotlight-item__intro-image burst">
+                            <a routerLink="/sap" class="spotlight-item__image-link">
+                                <img data-src="./assets/images/road_692567.jpg" alt="" class=" lazyloaded" src="./assets/images/road_692567.jpg"><noscript><img
+                                        src="./assets/images/road_692567.jpg" alt="SAP" /></noscript>
+                            </a>
+                        </div>
+
+                        <a routerLink="/sap" class="spotlight-item__logo-link">
+                            <div class="spotlight-item__logo">
+
+                                <img src="./assets/images/sapB.jpg" alt="SAP Logo">
+                            </div>
+                        </a>
+
+                        <h6 class="text-center">SAP</h6>
+
+                        <div class="spotlight-item__content">SAP Is At The Center Of Today’s Technology Revolution.
+                        </div>
+                    </div>
+
+                    <div class="spotlight-item__cta">
+                        <a routerLink="/sap" title="Explore SAP">Explore
+                            SAP</a>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-2 col-xs-12 news-column service-column">
+                    <div class="spotlight-item__top-content">
+                        <div class="spotlight-item__intro-image burst">
+                            <a routerLink="/0-smarthr" href="" class="spotlight-item__image-link">
+                                <img data-src="../../assets/images/osmartHPimge.jpeg" alt="osamrt image" class=" lazyloaded" src="../../assets/images/osmartHPimge.jpeg"><noscript><img src="./assets/images/oryx-bg.jpg"
+                                      alt="Oryx" /></noscript>
+                            </a>
+                        </div>
+
+                        <a routerLink="/o-smarthr" href="" class="spotlight-item__logo-link">
+                            <div class="spotlight-item__logo">
+
+                                <img src="../../assets/images/osmartlogo2.jpeg" alt="o-samrt logo">
+                            </div>
+                        </a>
+
+                        <h6 class="text-center">O-SmartHR</h6>
+
+                        <div class="spotlight-item__content">O-SmartHR is an all-in-one cloud solution for Human Resources Management.
+                        </div>
+                    </div>
+
+                    <div class="spotlight-item__cta">
+                        <a routerLink="/o-smarthr" href="" title="Explore Oryx HR">Explore
+                          O-SamrtHR</a>
+                    </div>
+                </div>
+
+                <div class="col-md-2 col-sm-2 col-xs-12 news-column service-column">
+                    <div class="spotlight-item__top-content">
+                        <div class="spotlight-item__intro-image burst">
+                            <a routerLink="/sage" class="spotlight-item__image-link">
+                                <img data-src="../../assets/images/sageHPimg.jpeg" alt="" class=" lazyloaded" src="../../assets/images/sageHPimg.jpeg"><noscript><img src="../../assets/images/sageHPimg.jpeg"
+                                        alt="sage" /></noscript>
+                            </a>
+                        </div>
+
+                        <a routerLink="/sage" class="spotlight-item__logo-link">
+                            <div class="spotlight-item__logo">
+
+                                <img src="./assets/images/sages.jpg" alt="SAP Logo">
+                            </div>
+                        </a>
+
+                        <h6 class="text-center">Sage</h6>
+
+                        <div class="spotlight-item__content">Sage strengthens businesses and encourages their success.
+                        </div>
+                    </div>
+
+                    <div class="spotlight-item__cta">
+                        <a routerLink="/sage" title="Explore Sage">Explore
+                            Sage</a>
+                    </div>
+                </div>
+
+                <div class="col-md-2 col-sm-2 col-xs-12 news-column service-column">
+                    <div class="spotlight-item__top-content">
+                        <div class="spotlight-item__intro-image burst">
+                            <a routerLink="/microsoft" class="spotlight-item__image-link">
+                                <img data-src="./assets/images/microsoft-bg.jpg" alt="" class=" lazyloaded" src="./assets/images/microsoft-bg.jpg"><noscript><img
+                                        src="./assets/images/microsoft-bg.jpg" alt="Microsoft" /></noscript>
+                            </a>
+                        </div>
+
+                        <a routerLink="/microsoft" class="spotlight-item__logo-link">
+                            <div class="spotlight-item__logo">
+
+                                <img src="./assets/images/microsoftS.jpg" alt="Microsoft Logo">
+                            </div>
+                        </a>
+
+                        <h6 class="text-center">Microsoft</h6>
+
+                        <div class="spotlight-item__content">Microsoft Is Committed To Creating And Delivering Technology.
+                        </div>
+                    </div>
+
+                    <div class="spotlight-item__cta">
+                        <a routerLink="/microsoft" title="Explore Microsoft">Explore
+                            Microsoft</a>
+                    </div>
+                </div>
+
+                <div class="col-md-1 col-sm-1 col-xs-12 news-column service-column">
+
+                </div>
+
+
+
+                <!-- <div class="col-md-3 col-sm-4 col-xs-12 news-column service-column">
+
+            <div class="">
+                <img src="./assets/images/oryxHr.jpg" class="img-responsive" alt="news-image">
+            </div>
+            <p class="text-center">Oryx HR Solution is a very flexible and evolving software.</p>
+            <p class="text-center"><a class="btn btn-default" href="https://oryxhr.com" role="button">View
+                    details</a></p>
+        </div> -->
+            </div>
+        </div>
+    </section>
+    <!--=========Services and product end ============-->
+
+
+    <!--==========product image start=============-->
+
+    <h3 class="marbtm20 text-center">Our clients</h3>
+    <div id="imageList" id="productDiv" class="imageDiv">
+        <img class="img-fluid" src="./assets/images/client1.jpg" alt="image is here">
+        <img class="img-fluid" src="./assets/images/client3.jpg" alt="image is here">
+        <img class="img-fluid" src="./assets/images/client2.jpg" alt="image is here">
+        <img class="img-fluid" src="./assets/images/client4.jpg" alt="image is here">
+        <img class="img-fluid" src="./assets/images/client5.jpg" alt="image is here">
+        <img class="img-fluid" src="./assets/images/client6.jpg" alt="image is here">
+        <img class="img-fluid" src="./assets/images/client7.jpg" alt="image is here">
+        <img class="img-fluid" src="./assets/images/client8.jpg" alt="image is here">
+        <img class="img-fluid" src="./assets/images/client9.jpg" alt="image is here">
+        <img class="img-fluid" src="./assets/images/client10.jpg" alt="image is here">
+        <img class="img-fluid" src="./assets/images/client11.jpg" alt="image is here">
+        <img class="img-fluid" src="./assets/images/client12.jpg" alt="image is here">
+        <img class="img-fluid" src="./assets/images/client13.jpg" alt="image is here">
+        <img class="img-fluid" src="./assets/images/client14.jpg" alt="image is here">
+        <img class="img-fluid" src="./assets/images/client15.jpg" alt="image is here">
+        <img class="img-fluid" src="./assets/images/client16.jpg" alt="image is here">
+        <img class="img-fluid" src="./assets/images/client17.jpg" alt="image is here">
+        <img class="img-fluid" src="./assets/images/client18.jpg" alt="image is here">
+        <img class="img-fluid" src="./assets/images/client19.jpg" alt="image is here">
+        <img class="img-fluid" src="./assets/images/client20.jpg" alt="image is here">
+    </div>
+
+    <!--==========product image start=============-->
+
+
+    <!--=========our team end ============-->
+
+
+
+    <!-- <div class="google-maps">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.4884763083332!2d3.4156061141783716!3d6.459625795326843!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8b356570bf3b%3A0x160f6e74de4c6c1e!2s101b+Ikeja+Way%2C+Dolphine+Estate%2C+Lagos!5e0!3m2!1sen!2sng!4v1548149187256"></iframe>
+</div> -->
