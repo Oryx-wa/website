@@ -152,12 +152,26 @@ body {
 
 /* Devices under 1199px (xl)  */
 
-@media(max-width: 1199.98px) {}
+@media(max-width: 1199.98px) {
+    .carousel-caption h1 {
+        font-size: 2.8rem;
+    }
+    .carousel-caption h3 {
+        font-size: 1.8rem;
+    }
+}
 
 
-/* Devices under 768px (xl)  */
+/* Devices under 992px (lg)  */
 
-@media(max-width: 768.98px) {}
+@media(max-width: 991.98px) {
+    .carousel-caption h1 {
+        font-size: 2.5rem;
+    }
+    .carousel-caption h3 {
+        font-size: 1.5rem;
+    }
+}
 
 
 /*======= Bootstrap Break
@@ -271,4 +285,52 @@ Extra small (xl)
 .cus {
     max-width: 25%;
     max-height: 25%;
+}
+
+
+/* footer style*/
+
+footer {
+    background-color: #121212;
+    padding: 1rem 2rem 3rem;
+}
+
+footer img {
+    height: 3.5rem;
+    margin: 1.5rem auto;
+}
+
+footer p,
+footera {
+    color: white;
+    text-decoration: none;
+}
+
+ul.social {
+    list-style-type: none;
+    display: flex;
+    max-width: 16rem;
+    margin: 0 auto;
+    padding: 0;
+}
+
+ul.social li {
+    margin: 0 auto;
+}
+
+footer .svg-inline--fa {
+    font-size: 2.3rem;
+}
+
+footer .svg-inline--fa:hover {
+    color: tomato;
+}
+
+.socket {
+    background-color: #202024;
+    border-top: .1rem solid #185abc;
+}
+
+h4 {
+    color: #6e6868;
 }
