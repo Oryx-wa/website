@@ -502,7 +502,7 @@ p.fnt-16 {
 }
 
 p.fnt-17 {
-    font-size: 17px;
+    font-size: 16px;
 }
 
 p.fnt-18 {
@@ -702,7 +702,7 @@ ul.header-info li {
     list-style: none;
     float: left;
     font-family: 'Montserrat';
-    font-size: 14px;
+    font-size: 12px;
     padding: 0px 32px;
     border-right: 1px solid #838383;
     margin-right: 32px;
@@ -1638,7 +1638,7 @@ ul.footer-link li a:hover {
     color: #fff;
     line-height: 35px;
     margin-bottom: 25px;
-    background-color: rgba(0,0,0,0.4);
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
 a.header-requestbtn.learn-more {
