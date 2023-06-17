@@ -1,0 +1,58 @@
+<main class="flex-centralize" *ngIf="requestDemo$ | async as requestDemo">
+    <!------------------PAGE HEADER------------------->
+    <div class="page-header-container">
+        <h1 class="page-title">{{ requestDemo.items[0].fields.title }}</h1>
+        <h2 class="page-subtitle">{{ requestDemo.items[0].fields.subtitle }}</h2>
+        <p class="page-description">{{ requestDemo.items[0].fields.description }}</p>
+    </div>
+
+    <!------------------REQUEST DEMO CONTENT------------------->
+    <div class="content-container image-form-grid">
+        <img
+            [src]="'https:' + requestDemo.items[0].fields.image.fields.file.url"
+            class="form-image"
+            alt ="section image"
+        />
+
+        <!-------REQUEST FORM-------->
+        <form class="request-form">
+            <!-------FORM INPUTS-------->
+            <div class="form-input" *ngFor="let formfield of formFields">
+                <label [for]="formfield.id">{{ requestDemo.items[0].fields.formFields[formfield.index].fields.label }}</label>
+                <input
+                    [type]="formfield.type" [id]="formfield.id" [name]="formfield.id"
+                    [placeholder]="requestDemo.items[0].fields.formFields[formfield.index].fields.placeholder"
+                    required
+                />
+            </div>
+
+            <!-------ADDITIONAL MESSAGE-------->
+            <div class="form-input">
+                <label for="message">{{ requestDemo.items[0].fields.formFields[4].fields.label }}</label>
+                <textarea
+                    type="text" id="message" name="message" class="text-box"
+                    [placeholder]="requestDemo.items[0].fields.formFields[4].fields.placeholder"
+                    required></textarea>
+            </div>
+
+            <!-------CHECKBOX OPTIONS-------->
+            <div class="checkbox-section">
+                <p>{{ requestDemo.items[0].fields.productsQuestion }}</p>
+                <div class="form-row-grid">
+                    <div class="checkbox-option" *ngFor="let option of requestDemo.items[0].fields.products">
+                        <input type="checkbox" [id]="option" [name]="option" [value]="option" class="css-checkbox">
+                        <label [for]="option"><span class="checkbox-text">{{ option }}</span></label>
+                    </div>
+                </div>
+            </div>
+
+            <!-------SUBMIT BUTTON-------->
+            <button class="red-button button-hover" type="submit">{{ requestDemo.items[0].fields.buttonText }}</button>
+        </form>
+    </div>
+
+    <!---------CLIENT SLIDER & ORYX FOOTER---------->
+    <app-oryx-clients-slider class="content-container"></app-oryx-clients-slider>
+    <app-oryx-footer class="content-container"></app-oryx-footer>
+
+</main>

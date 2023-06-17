@@ -1,0 +1,115 @@
+<main>
+    <!------------------PAGE HEADER------------------->
+    <div class="page-header-container">
+        <h1 class="page-title">Services</h1>
+        <h2 class="page-subtitle">Services & Products</h2>
+        <p class="page-description">Explore our list of products and services and find what best suites you.</p>
+    </div>
+
+
+    <!----------------------ORXY----------------------->
+    <div class="service-container oryx-service-container">
+        <img class="service-logo" src="assets/images/oryx_logo.png" alt="Oryx Logo">
+        <h1 class="section-title">Oryx Services</h1>
+        <hr/>
+        <div class="service-card-grid" *ngIf="oryxServiceList$ | async as oryxServiceList">
+            <!--<pre>{{ oryxServiceList | json }}</pre>-->
+            <div class="item" *ngFor="let service of oryxServiceList.items[0].fields.orderedList">
+                <div class="service-card" *ngIf="service.fields.section.includes('Oryx')">
+                    <div class="card-content">
+                        <img class="service-logo" [src]="'https:' + service.fields.logo.fields.file.url" alt="Oryx Service Logo">
+                        <h1 class="card-heading">{{ service.fields.heading }}</h1>
+                        <p class="card-description">{{ service.fields.description }}</p>
+                        <a class="learn-more-link" *ngIf="service.fields.launched" [routerLink]="service.fields.routerLink">
+                            <p>Learn more</p><pre>&emsp;</pre>
+                            <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1.43974 11.78C1.31307 11.78 1.18641 11.7333 1.08641 11.6333C0.893073 11.44 0.893073 11.12 1.08641 10.9267L5.43307 6.58C5.75307 6.26 5.75307 5.74 5.43307 5.42L1.08641 1.07333C0.893073 0.879998 0.893073 0.559998 1.08641 0.366664C1.27974 0.173331 1.59974 0.173331 1.79307 0.366664L6.13974 4.71333C6.47974 5.05333 6.67307 5.51333 6.67307 6C6.67307 6.48666 6.48641 6.94666 6.13974 7.28666L1.79307 11.6333C1.69307 11.7267 1.56641 11.78 1.43974 11.78Z" fill="#03449E"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-----------------------SAP------------------------>
+    <div class="service-container">
+        <img class="service-logo" src="assets/images/sap_logo.png" alt="SAP Logo">
+        <h1 class="section-title">SAP</h1>
+        <hr/>
+        <div class="service-card-grid" *ngIf="oryxServiceList$ | async as oryxServiceList">
+            <div class="item" *ngFor="let service of oryxServiceList.items[0].fields.orderedList">
+                <div class="service-card" *ngIf="service.fields.section.includes('SAP')">
+                    <div class="card-content">
+                        <img class="service-logo" [src]="'https:' + service.fields.logo.fields.file.url" alt="Oryx Service Logo">
+                        <h1 class="card-heading">{{ service.fields.heading }}</h1>
+                        <p class="card-description">{{ service.fields.description }}</p>
+                        <a class="learn-more-link" *ngIf="service.fields.launched" [routerLink]="service.fields.routerLink">
+                            <p>Learn more</p><pre>&emsp;</pre>
+                            <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1.43974 11.78C1.31307 11.78 1.18641 11.7333 1.08641 11.6333C0.893073 11.44 0.893073 11.12 1.08641 10.9267L5.43307 6.58C5.75307 6.26 5.75307 5.74 5.43307 5.42L1.08641 1.07333C0.893073 0.879998 0.893073 0.559998 1.08641 0.366664C1.27974 0.173331 1.59974 0.173331 1.79307 0.366664L6.13974 4.71333C6.47974 5.05333 6.67307 5.51333 6.67307 6C6.67307 6.48666 6.48641 6.94666 6.13974 7.28666L1.79307 11.6333C1.69307 11.7267 1.56641 11.78 1.43974 11.78Z" fill="#03449E"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-----------------------MICROSOFT------------------------>
+    <div class="service-container">
+        <img class="service-logo" src="assets/images/microsoft_logo.png" alt="Microsoft Logo">
+        <h1 class="section-title">Microsoft</h1>
+        <hr/>
+        <div class="service-card-grid" *ngIf="oryxServiceList$ | async as oryxServiceList">
+            <div class="item" *ngFor="let service of oryxServiceList.items[0].fields.orderedList">
+                <div class="service-card" *ngIf="service.fields.section.includes('Microsoft')">
+                    <div class="card-content">
+                        <img class="service-logo" [src]="'https:' + service.fields.logo.fields.file.url" alt="Oryx Service Logo">
+                        <h1 class="card-heading">{{ service.fields.heading }}</h1>
+                        <p class="card-description">{{ service.fields.description }}</p>
+                        <a class="learn-more-link" *ngIf="service.fields.launched" [routerLink]="service.fields.routerLink">
+                            <p>Learn more</p><pre>&emsp;</pre>
+                            <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1.43974 11.78C1.31307 11.78 1.18641 11.7333 1.08641 11.6333C0.893073 11.44 0.893073 11.12 1.08641 10.9267L5.43307 6.58C5.75307 6.26 5.75307 5.74 5.43307 5.42L1.08641 1.07333C0.893073 0.879998 0.893073 0.559998 1.08641 0.366664C1.27974 0.173331 1.59974 0.173331 1.79307 0.366664L6.13974 4.71333C6.47974 5.05333 6.67307 5.51333 6.67307 6C6.67307 6.48666 6.48641 6.94666 6.13974 7.28666L1.79307 11.6333C1.69307 11.7267 1.56641 11.78 1.43974 11.78Z" fill="#03449E"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-----------------------OTHERS------------------------>
+    <div class="service-container">
+        <h1 class="section-title" id="other-services"></h1>
+        <hr/>
+        <div class="service-card-grid" *ngIf="oryxServiceList$ | async as oryxServiceList">
+            <div class="item" *ngFor="let service of oryxServiceList.items[0].fields.orderedList">
+                <div class="service-card" *ngIf="service.fields.section.includes('Others')">
+                    <div class="card-content">
+                        <img class="service-logo" [src]="'https:' + service.fields.logo.fields.file.url" alt="Oryx Service Logo">
+                        <h1 class="card-heading">{{ service.fields.heading }}</h1>
+                        <p class="card-description">{{ service.fields.description }}</p>
+                        <a class="learn-more-link" *ngIf="service.fields.launched" [routerLink]="service.fields.routerLink">
+                            <p>Learn more</p><pre>&emsp;</pre>
+                            <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1.43974 11.78C1.31307 11.78 1.18641 11.7333 1.08641 11.6333C0.893073 11.44 0.893073 11.12 1.08641 10.9267L5.43307 6.58C5.75307 6.26 5.75307 5.74 5.43307 5.42L1.08641 1.07333C0.893073 0.879998 0.893073 0.559998 1.08641 0.366664C1.27974 0.173331 1.59974 0.173331 1.79307 0.366664L6.13974 4.71333C6.47974 5.05333 6.67307 5.51333 6.67307 6C6.67307 6.48666 6.48641 6.94666 6.13974 7.28666L1.79307 11.6333C1.69307 11.7267 1.56641 11.78 1.43974 11.78Z" fill="#03449E"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!---------ORYX CLIENT SLIDER & REQUEST DEMO FOOTER---------->
+    <app-oryx-clients-slider></app-oryx-clients-slider>
+    <app-request-demo-footer></app-request-demo-footer>
+    <app-oryx-footer></app-oryx-footer>
+
+</main>

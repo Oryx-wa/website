@@ -1,0 +1,114 @@
+<main class="flex-centralize" *ngIf="contactUsPage$ | async as contactUsPage">
+    <!------------------PAGE HEADER------------------->
+    <div class="page-header-container">
+        <h1 class="page-title">{{ contactUsPage.items[0].fields.intro }}</h1>
+        <h2 class="page-subtitle">{{ contactUsPage.items[0].fields.title }}</h2>
+        <p class="page-description">{{ contactUsPage.items[0].fields.subtitle }}</p>
+    </div>
+
+
+    <!------------------CONTACT US CONTENT------------------->
+    <div class="content-container image-form-grid" >
+        <img
+            [src]="'https:' + contactUsPage.items[0].fields.image.fields.file.url"
+            class="form-image"
+            alt ="section image"
+        />
+
+        <!-------CONTACT FORM-------->
+        <form class="contact-form">
+            <p class="help-info"><span>Note:</span> All fields are required.</p>
+
+            <div class="form-row-grid">
+                <!-------FIRST NAME-------->
+                <div class="form-input">
+                    <label for="firstName">{{ contactUsPage.items[0].fields.formFields[0].fields.label }}</label>
+                    <input
+                        type="text" id="firstName" name="firstName"
+                        [placeholder]="contactUsPage.items[0].fields.formFields[0].fields.placeholder"
+                        required
+                    />
+                </div>
+
+                <!-------LAST NAME-------->
+                <div class="form-input">
+                    <label for="lastName">{{ contactUsPage.items[0].fields.formFields[1].fields.label }}</label>
+                    <input
+                        type="text" id="lastName" name="lastName"
+                        [placeholder]="contactUsPage.items[0].fields.formFields[1].fields.placeholder"
+                        required
+                    />
+                </div>
+            </div>
+
+
+            <!-------EMAIL-------->
+            <div class="form-input">
+                <label for="email">{{ contactUsPage.items[0].fields.formFields[2].fields.label }}</label>
+                <input
+                    type="email" id="email" name="email"
+                    [placeholder]="contactUsPage.items[0].fields.formFields[2].fields.placeholder"
+                    required
+                />
+            </div>
+
+
+            <!-------PHONE NUMBER-------->
+            <div class="form-input">
+                <label for="phone">{{ contactUsPage.items[0].fields.formFields[3].fields.label }}</label>
+                <input
+                    type="tel" id="phone" name="phone"
+                    [placeholder]="contactUsPage.items[0].fields.formFields[3].fields.placeholder"
+                    required
+                />
+            </div>
+
+
+            <!-------COMPANY-------->
+            <div class="form-input">
+                <label for="company">{{ contactUsPage.items[0].fields.formFields[4].fields.label }}</label>
+                <input
+                    type="text" id="company" name="company"
+                    [placeholder]="contactUsPage.items[0].fields.formFields[4].fields.placeholder"
+                    required
+                />
+            </div>
+
+
+            <!-------MODE OF CONTACT-------->
+            <div class="form-input">
+                <label for="contactMode">{{ contactUsPage.items[0].fields.formFields[5].fields.label }}</label>
+                <select id="contactMode" name="contactMode" class="select-box form-select">
+                    <option value="" disabled selected>Select an option</option>
+                    <option value="phone">Phone Number</option>
+                    <option value="email">Email</option>
+                </select>
+            </div>
+
+
+            <!-------MESSAGE-------->
+            <div class="form-input">
+                <label for="message">{{ contactUsPage.items[0].fields.formFields[6].fields.label }}</label>
+                <textarea type="text" id="message" name="message" class="text-box" required></textarea>
+            </div>
+
+
+            <!-------PRIVACY POLICY-------->
+            <div class="privacy-policy">
+                <input type="checkbox" id="privacyPolicy" name="privacyPolicy" class="css-checkbox" required>
+                <label for="privacyPolicy"><span class="checkbox-text">{{ contactUsPage.items[0].fields.policyQuestion }}</span></label>
+            </div>
+
+
+            <!-------SUBMIT BUTTON-------->
+            <button class="red-button button-hover" type="submit">Send Message</button>
+
+        </form>
+    </div>
+
+    <!---------CONTACT FOOTER & ORYX FOOTER---------->
+    <app-contact-footer></app-contact-footer>
+    <app-oryx-footer></app-oryx-footer>
+
+</main>
+
